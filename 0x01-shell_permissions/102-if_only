@@ -1,0 +1,2 @@
+#!/bid/bash
+sudo chown -R --from=guillaume betty hello
