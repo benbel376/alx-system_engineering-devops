@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # creates a pid file and outputs different message upon signal
-# shell check disable=SC2009
+# shellcheck disable=SC2009
 
 Exiter()
 {
