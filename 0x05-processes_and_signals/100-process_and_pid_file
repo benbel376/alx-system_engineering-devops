@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 # creates a pid file and outputs different message upon signal
+# shell check disable=SC2009
+
 Exiter()
 {
-echo "I hate the kill command"
 kill $(pgrep -F /var/run/myscript.pid)
 rm -rf /var/run/myscript.pid
 }
 echo $BASHPID > /var/run/myscript.pid
-trap "echo I hate the kill command" SIGTERM
+trap "echo I hate the kill command && Exiter" SIGTERM
 trap "echo Y U no love me?!" SIGINT
-trap "Exiter()" SIGQUIT SIGTERM
+trap "Exiter" SIGQUIT
 while :
 do
 echo "To infinity and beyond"
