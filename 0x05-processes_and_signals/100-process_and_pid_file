@@ -4,7 +4,7 @@
 
 Exiter()
 {
-kill $(pgrep -F /var/run/myscript.pid)
+pkill -F /var/run/myscript.pid
 rm -rf /var/run/myscript.pid
 }
 echo $BASHPID > /var/run/myscript.pid
