@@ -5,7 +5,7 @@
 Exiter()
 {
 pkill -F /var/run/myscript.pid
-rm -rf /var/run/myscript.pid
+rm /var/run/myscript.pid
 }
 echo $BASHPID > /var/run/myscript.pid
 trap "echo I hate the kill command && Exiter" SIGTERM
