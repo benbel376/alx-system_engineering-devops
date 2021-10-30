@@ -5,13 +5,13 @@
 Exiter()
 {
 rm -rf /var/run/myscript.pid
-kill $BASHPID
+exit 1
 }
 Exiter1()
 {
 echo "I hate the kill command"
 rm -rf /var/run/myscript.pid
-kill $BASHPID
+exit 1
 }
 echo $BASHPID > /var/run/myscript.pid
 trap Exiter1 SIGTERM
