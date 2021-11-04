@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# PID and name of a program that owns a given socket.
+
+netstat -lp
