@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# reading and writing data across connection
+
+nc -l localhost 98
+
