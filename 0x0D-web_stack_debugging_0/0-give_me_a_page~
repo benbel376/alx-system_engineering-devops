@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Run Apache on /265-0 Docker container.
+/etc/init.d/apache2 start
+
